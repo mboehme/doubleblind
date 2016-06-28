@@ -2,7 +2,7 @@
 
 #Steps
 1. Find *definite* conflicts of PC members (co-authors of last 5 years)
-  1. Adapt pc.txt and paste the names of your PC members.
+  1. Adapt `pc.txt` and paste the names of your PC members.
   2. Resolve name ambiguities by adding the DBLP account number, e.g., Christian Hammer 0001. Otherwise, the reported set of co-authors will be a superset of the actual co-authors.
   3. Open a terminal (Linux OS or Mac) and execute `./conflicts.sh`
 2. Generate *potential* conflicts. This is done after the submission deadline and generates a superset of submitters to the current conference and authors of papers submitted to the conference in the previous year.
