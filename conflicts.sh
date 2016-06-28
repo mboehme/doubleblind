@@ -15,5 +15,9 @@ while read person; do
     curl -s "http://dblp.org/search/publ/api?q=year%3A$year%3Aauthor%3A$urlpt&h=1000&format=xml" \
     | xpath '/result/hits/hit/info/authors/author' 2>/dev/null >> $tmp
   done
+  if [ -s $tmp ]; then
+    echo "Cannot download previous submitters. Check internet connection or DBLP query."
+    exit
+  fi
   cat $tmp | sed 's/<\/author>/,/g' | tr , '\n' | sed 's/<author>//g' | sort | uniq
 done < pc.txt
