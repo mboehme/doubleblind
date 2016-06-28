@@ -1,5 +1,5 @@
 #Double Blind Conflicts-Of-Interest Identification
-The following scripts were used to identify conflicts of interest during the first double blind review at the International Symposium on Software Testing and Analysis (ISSTA) in 2016.
+The following scripts were used to identify conflicts of interest during the first double blind review at the International Symposium on Software Testing and Analysis (ISSTA) in 2016. [More info ...](https://issta2016.cispa.saarland/interview-with-abhik-roychoudhury-issta-2016-program-chair/)
 
 #Features
 * Automatically crawls DBLP to find co-authors of the PC members from the last 5 years. 
