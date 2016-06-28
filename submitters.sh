@@ -26,6 +26,10 @@ curl -s "http://dblp.org/search/publ/api?q=year%3A$LAST_YEAR%3Avenue%3A$VENUE&h=
   | xpath '/result/hits/hit/info/authors/author' 2>/dev/null \
   | sed 's/<\/author>/,/g' | tr , '\n' | sed 's/<author>//g' \
   | sed 's/ 0[0-9]*//g' > prevAuthors.txt
+if [ -s prevAuthors.txt ]; then
+  echo "Cannot download previous submitters. Check internet connection or DBLP query."
+  exit
+fi
 cat curAuthors.txt prevAuthors.txt \
   | sed '/^[[:space:]]*$/d;s/[[:space:]]*$//' | sed '/^$/d' \
   | sort | uniq > allAuthors.txt
