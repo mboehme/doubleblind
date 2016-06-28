@@ -40,4 +40,4 @@ sudo apt-get install xpath
 ```
 
 #Acknowledgements
-This work is licensed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/
+Scripts have been created by Marcel Böhme. This work is licensed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/
