@@ -7,7 +7,7 @@ LANG=C
 while read person; do
   echo ""
   urlpt=$(echo "$person" | sed 's/ /_/g' | sed 's/\.//g' | tr '[:upper:]' '[:lower:]')
-  echo $person : $urlpt
+  echo "$person :"
   echo -----------------------
   tmp=$(mktemp)
   year=$(date +"%Y")
@@ -20,4 +20,4 @@ while read person; do
     exit
   fi
   cat $tmp | sed 's/<\/author>/,/g' | tr , '\n' | sed 's/<author>//g' | sort | uniq
-done < pc.txt
+done < pc.txt > conflicts.txt
